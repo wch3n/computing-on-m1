@@ -1,1 +1,1 @@
-# computing-on-m1
+# Scientific computing on Apple M1 machines
