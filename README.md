@@ -68,3 +68,24 @@ or
 ```sh
 % python3.9 -m pip install <package>
 ```
+
+## Benchmarking
+
+MacBook Air late-2020 (M1, 16GB mem), LAPACK/OpenBLAS, FFTW, OpenMPI (x86_64)
+
+Reference: Intel Xeon E5-2680 v4 (Broadwell) @ 2.40GHz, Intel Compiler+MKL, Intel MPI 
+
+### Quantum-ESPRESSO
+
+The test job calculates the electronic structure of diamond using HSE hybrid functional.
+The short test duration is to avoid thermal throttling on the fanless MBA.
+
+#### Walltime comparison
+cpu(s) | MBA (x86) | Ref.
+--- | --- | ---
+1   | 64s | 48s
+2   | 32s | 37s
+4   | 20s | 24s
+
+
+
